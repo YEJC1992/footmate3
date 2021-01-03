@@ -12,7 +12,7 @@ class FootmateSpider(scrapy.Spider):
     hege = settings.hege
     timebegin = settings.timebegin
     dt = datetime.datetime.strptime(timebegin, "%Y-%m-%d")
-    timeend = (dt + datetime.timedelta(days=7)).strftime("%Y-%m-%d")
+    timeend = (dt + datetime.timedelta(days=3)).strftime("%Y-%m-%d")
     scrapy_end_time = settings.scrapy_end_time
     page = settings.page
     url = 'http://db.foodmate.net/choujian/?kw=&catidname={}&hege={}&xmfl1=&shangbiao=&scname=&cyname=&jibie=&zfid=&timebegin={}&timeend={}&submit1=%E6%9F%A5%E8%AF%A2&&page={}'
@@ -66,7 +66,7 @@ class FootmateSpider(scrapy.Spider):
             dt_end = datetime.datetime.strptime(self.scrapy_end_time, "%Y-%m-%d")
             if(dt < dt_end):
                 self.timebegin = (dt + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
-                self.timeend = (dt + datetime.timedelta(days=8)).strftime("%Y-%m-%d")
+                self.timeend = (dt + datetime.timedelta(days=4)).strftime("%Y-%m-%d")
                 self.page = 1
                 targetUrl = self.url.format(self.catidname, self.hege, self.timebegin, self.timeend, self.page)
                 yield scrapy.Request(targetUrl, self.parse)

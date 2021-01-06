@@ -10,14 +10,14 @@
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 #(1804-调味品)
-catidname = '1804'
+catidname = '1799'
 #1-合格 2-不合格 ''全部
 hege = ''
 #开始时间 一个周一个周的范围搜索
 #'2015-01-12'
-timebegin = '2018-04-01'
+timebegin = '2015-01-01'
 
-scrapy_end_time = '2018-08-01'
+scrapy_end_time = '2015-08-01'
 
 page = 1
 

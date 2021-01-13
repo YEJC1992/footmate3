@@ -15,9 +15,9 @@ catidname = '1799'
 hege = ''
 #开始时间 一个周一个周的范围搜索
 #'2015-01-12'
-timebegin = '2019-05-01'
+timebegin = '2020-01-01'
 
-scrapy_end_time = '2020-01-01'
+scrapy_end_time = '2020-08-01'
 
 page = 1
 
